@@ -1,17 +1,14 @@
 import math
-import os
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
-import matplotlib as mpl
 
-os.environ["XDG_SESSION_TYPE"] = "xcb"
+from histogram import build_freq_hist, build_prob_hist, build_dist_function, build_dist_polygon, build_box_plot
 
 
 def read_values(file_path):
     file = pd.read_csv(file_path)
-    return list(map(lambda i: i[0], file.values))
+    return list(map(lambda e: e[0], file.values))
 
 
 def is_int(number):
@@ -101,8 +98,29 @@ print(f"25% Quantile: {data_frame.quantile(0.25)}")
 print(f"75% Quantile: {data_frame.quantile(0.75)}")
 print(f"Interquartile latitude: {data_frame.quantile(0.75) - data_frame.quantile(0.25)}")
 
+freq_hist_fig, freq_hist_axis = plt.subplots()
+prob_hist_fig, prob_hist_axis = plt.subplots()
+dist_func_fig, dist_func_axis = plt.subplots()
+dist_poly_fig, dist_poly_axis = plt.subplots()
+box_plot_fig, box_plot_axis = plt.subplots()
 
-fig, ax = plt.subplots(figsize=(5, 2.7), layout='constrained')
-calculations = ['max', 'min', 'avg']
+steps_count = length // 10
+step = valueRange / (steps_count - 1)
 
-ax.bar(calculations, np.random.rand(len(calculations)))
+build_freq_hist(freq_hist_axis, values, steps_count, step, quantile25, median, avg, quantile75)
+freq_hist_axis.plot()
+
+build_prob_hist(prob_hist_axis, values, steps_count, step, minValue, maxValue,
+                quantile25, median, avg, quantile75, standard_deviation)
+prob_hist_axis.plot()
+
+build_dist_function(dist_func_axis, values, step, minValue, maxValue, avg, standard_deviation)
+dist_func_axis.plot()
+
+build_dist_polygon(dist_poly_axis, values)
+dist_poly_axis.plot()
+
+build_box_plot(box_plot_axis, values)
+box_plot_axis.plot()
+
+plt.show()
