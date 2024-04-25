@@ -11,7 +11,9 @@ def read_values(file_path):
 def lab_2_1(file_path: str):
     values = read_values(file_path)
     mean = numpy.mean(values)
+    mean2 = sum(values) / len(values)
     mle = 1 / mean
+    print(1 / mean2)
     print(f'Оценка максимального правдоподобия: {mle}')
 
 
