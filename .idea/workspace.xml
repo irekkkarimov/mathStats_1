@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d55db9b-08d9-4d2c-be8a-9dd51c084d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/mathStats_2s.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_2/.idea/mathStats_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/.idea/mathStats_4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/data/r4z1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/data/r4z2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mathStats_4/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mathStats_2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/mathStats_2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mathStats_4/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/mathStats_4/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

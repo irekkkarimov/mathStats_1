@@ -33,15 +33,15 @@ def lab_4_2(file_path: str):
 
     print("Коэффициент регрессии:", reg)
 
-    intercept = x_mean - cor * y_mean
-    x_point = cor * y_const + intercept
+    intercept = x_mean - reg * y_mean
+    x_point = reg * y_const + intercept
 
     plt.scatter(y_values, x_values, color="green", label="Исходные данные")
     plt.title('Диаграмма рассеивания')
     plt.xlabel('Y')
     plt.ylabel('X')
     plt.grid()
-    plt.plot(y_values, cor * numpy.array(y_values) + intercept, color="orange", label="Линия регрессии")
+    plt.plot(y_values, reg * numpy.array(y_values) + intercept, color="orange", label="Линия регрессии")
     plt.scatter(y_const, x_point, color="black", label=f"Точка {y_const}, {x_point}")
     # trend = numpy.polyfit(y_values, x_values, 1)
     # trend_poly = numpy.poly1d(trend)
